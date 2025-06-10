@@ -8,9 +8,9 @@ This repository defines the specifications and standards used by OpenSig applica
 
 | Area         | Description                                   | Spec File |
 |--------------|-----------------------------------------------|-----------|
-| OpenSig Standard | Details the OpenSig hash chain structure, data encoding, and encryption model | [`signatures/opensig-standard.md`](signatures/opensig-standard.md) |
+| OpenSig Standard | Details the OpenSig hash chain structure, data encoding, and encryption model | [`standard/opensig-standard.md`](standard/opensig-standard.md) |
 | DID Method   | Defines the `did:os` decentralized identifier format for OpenSig identities | [`did/did-os-method-spec.md`](did/did-os-method-spec.md) |
-| Registry Contract | Reference contract and ABI/interface for the OpenSig on-chain registry | [contracts/OpensigRegistry.sol](./contracts/OpensigRegistry.sol) |
+| Registry Contract | Reference contract and ABI/interface for the OpenSig on-chain registry | [contracts/OpensigRegistry.sol](contracts/OpensigRegistry.sol) |
 
 ## 🎯 Goals
 
@@ -32,10 +32,9 @@ All specifications in this repository are published under the [Creative Commons 
 
 ## 🤝 Contributing
 
-Contributions, feedback, and discussion are welcome! Open an issue or join us:
+Contributions, feedback, and discussion are welcome! Open an issue, submit a pull request or join us:
 
 - Email: [info@opensig.net](mailto:info@opensig.net)
-- Discord: [https://discord.gg/WyzmB9Qs](https://discord.gg/WyzmB9Qs)
 
 ## 🌐 Learn More
 
