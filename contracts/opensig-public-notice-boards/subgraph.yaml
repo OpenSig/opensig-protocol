@@ -1,0 +1,24 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: OpensigPublicNoticeBoard
+    network: matic
+    source:
+      address: "0x3017dF2942A763F110Ec0f0E5c40534973b2adDe"
+      abi: OpensigPublicNoticeBoard
+      startBlock: 73399564
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Signature
+      abis:
+        - name: OpensigPublicNoticeBoard
+          file: ./abis/OpensigPublicNoticeBoard.json
+      eventHandlers:
+        - event: Signature(uint256,indexed address,indexed bytes32,bytes)
+          handler: handleSignature
+      file: ./src/opensig-public-notice-board.ts
