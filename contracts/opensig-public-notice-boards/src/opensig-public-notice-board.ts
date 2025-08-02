@@ -7,6 +7,7 @@ export function handleSignature(event: SignatureEvent): void {
   )
   entity.time = event.params.time
   entity.signer = event.params.signer
+  entity.nonce = event.params.nonce
   entity.board = event.params.board
   entity.data = event.params.data
 

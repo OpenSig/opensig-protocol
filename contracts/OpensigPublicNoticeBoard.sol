@@ -19,7 +19,7 @@ contract OpensigPublicNoticeBoard {
     /**
      * @dev emitted each time a new published signature is registered.
      */
-    event Signature(uint256 time, address indexed signer, bytes32 indexed board, bytes data);
+    event Signature(uint256 time, address indexed signer, bytes32 indexed nonce, bytes32 indexed board, bytes data);
 
     /**
      * @dev registry of published signatures.
@@ -35,7 +35,7 @@ contract OpensigPublicNoticeBoard {
         uint32 chainId = uint32(bytes4(nonce));
         require(chainId == CHAIN_ID, "chain id mismatch");
         signatures[nonce] = true;
-        emit Signature(block.timestamp, msg.sender, board, data);
+        emit Signature(block.timestamp, msg.sender, nonce, board, data);
     }
 
     /**
