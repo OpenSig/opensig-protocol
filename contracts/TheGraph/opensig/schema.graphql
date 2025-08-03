@@ -1,0 +1,33 @@
+type Signature @entity(immutable: true) {
+  id: Bytes!
+  time: BigInt! # uint256
+  signer: Bytes! # address
+  signature: Bytes! # bytes32
+  data: Bytes! # bytes
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type PublicNotice @entity(immutable: true) {
+  id: Bytes!
+  time: BigInt! # uint256
+  signer: Bytes! # address
+  nonce: Bytes! # bytes32
+  board: Bytes! # bytes32
+  data: Bytes! # bytes
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type CreditEvent @entity(immutable: true) {
+  id: Bytes!
+  from: Bytes! # address
+  to: Bytes! # address
+  value: BigInt! # uint256
+  purpose: Bytes! # bytes32
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

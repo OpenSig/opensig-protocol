@@ -5,7 +5,7 @@ import {
   clearStore,
   beforeAll,
   afterAll
-} from "matchstick-as/assembly/index"
+} from "matchstick-as"
 import { BigInt, Address, Bytes } from "@graphprotocol/graph-ts"
 import { Signature } from "../generated/schema"
 import { Signature as SignatureEvent } from "../generated/OpensigRegistry/OpensigRegistry"
