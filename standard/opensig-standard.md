@@ -58,17 +58,18 @@ Each signature can include an optional **data packet**, used for annotations.
 ### Header
 
 Each data packet starts with a 2-byte header:
-- **Byte 0**: Data version (currently `0x00`)
+- **Byte 0**: Data version (currently `0x01`)
 - **Byte 1**: Bitfield:
   - Bit 7: Encryption flag (1 = encrypted)
   - Bits 0–6: Data type
 
 ### Data Types
 
-| Type | Value | Description        |
-|------|-------|--------------------|
-| 0    | `0x00`| Plain text (Unicode) |
-| 1    | `0x01`| Binary data (hex)  |
+| Type | Value | Introduced In | Description          |
+|------|-------|---------------|----------------------|
+| 0    | `0x00`| version 0     | Plain text (Unicode) |
+| 1    | `0x01`| version 0     | Binary data (hex)    |
+| 2    | `0x02`| version 1     | Object data ([MessagePacked](https://msgpack.org/)) |
 
 ### Encrypted Format
 
