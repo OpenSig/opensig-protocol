@@ -57,13 +57,10 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - Transfer
-        - AccountBurned
       abis:
         - name: CreditManager
           file: ./abis/CreditManager.json
       eventHandlers:
         - event: TransferWithPurpose(indexed address,indexed address,uint256,bytes32)
           handler: handleTransfer
-        - event: AccountBurned(indexed address,uint256)
-          handler: handleAccountBurned
       file: ./src/credit-manager.ts
